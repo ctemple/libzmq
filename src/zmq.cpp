@@ -26,6 +26,15 @@
     You should have received a copy of the GNU Lesser General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
+
+// "Tell them I was a writer.
+//  A maker of software.
+//  A humanist. A father.
+//  And many things.
+//  But above all, a writer.
+//  Thank You. :)"
+//  - Pieter Hintjens
+
 #include "precompiled.hpp"
 #define ZMQ_TYPE_UNSAFE
 
@@ -842,7 +851,7 @@ inline int zmq_poller_poll (zmq_pollitem_t *items_, int nitems_, long timeout_)
     }
 
     //  Cleanup
-    rc = zmq_poller_destroy (&poller);
+    zmq_poller_destroy (&poller);
     delete [] events;
     return rc;
 }
